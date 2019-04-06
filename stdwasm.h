@@ -7,7 +7,7 @@
 #define FALSE 0
 #define SUCCESS 0
 #define FAILURE 1
-#define ASSERT(expr, message)                                                  \
+#define assert(expr, message)                                                  \
   if (!(expr))                                                                 \
   return assert_failed(message, __FILE__, __LINE__)
 
