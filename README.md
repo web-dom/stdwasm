@@ -8,6 +8,7 @@ A barebones common library for web assembly apps written in C
 * [ ] malloc, free, realloc
 * [ ] json_parse, json_stringify
 * [ ] vector, string, hashmap
+* [ ] webdom.h for accessing DOM via [web-dom](https://github.com/web-dom/web-dom/)
 
 
 # Testing
