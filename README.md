@@ -37,6 +37,7 @@ sudo apt-get install llvm-8
 sudo apt-get install wasm-ld-8
 sudo apt-get install lld-8
 sudo apt-get install clang-8
+sudo apt-get install clang-format
 ```
 
 Now you should be ready to build
