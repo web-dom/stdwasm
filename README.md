@@ -6,6 +6,8 @@ A barebones common library for web assembly apps written in C
 * [x] export attribute
 * [x] assert() with compatability for [west](https://github.com/web-dom/west) testing framework
 * [ ] malloc, free, realloc
+* [ ] json_parse, json_stringify
+* [ ] vector, string, hashmap
 
 
 # Testing
