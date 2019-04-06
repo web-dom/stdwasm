@@ -3,7 +3,7 @@
 A barebones common library for web assembly apps written in C
 
 * [x] NULL, TRUE, FALSE, SUCCESS, FAILURE
-* [x] export attribute
+* [x] export attribute for easily exposing a function on web assembly
 * [x] assert() with compatability for [west](https://github.com/web-dom/west) testing framework
 * [ ] malloc, free, realloc
 * [ ] json_parse, json_stringify
