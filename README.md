@@ -19,3 +19,29 @@ export int test_addition(){
   return SUCCESS;
 }
 ```
+
+# Compiling examples in this project
+
+You'll need several LLVM tools before you can compile:
+
+Add to your sources appropriate sources
+
+`sudo vim /etc/apt/sources.list`
+
+choose the right sources from http://apt.llvm.org/
+
+```
+sudo apt-get update
+sudo apt-get install llvm-8
+sudo apt-get install wasm-ld-8
+sudo apt-get install lld-8
+sudo apt-get install clang-8
+```
+
+Now you should be ready to build
+
+`make`
+
+Then you can serve the example with
+
+`make serve`
