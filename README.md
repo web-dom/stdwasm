@@ -13,7 +13,7 @@ A barebones common library for web assembly apps written in C
 
 # Why create a new standard library?
 
-C is rife with historical code meant for a huge variety of architectures and system capabilities that make no sense for web assembly. `stdwasm` aims to create a standard library optimized for web assembly memory and no system capabilities. The hope to create an ecosystem of `stdwasm` libraries that make highly optimzied web assembly app easy to create. Dependencies should just work and work well.
+C standard libray with historical code meant for a variety of architectures and system capabilities that make no sense for the web. On the web, assuming a `println` is an archiac abstraction. stdwasm` aims to create a standard library optimized for web assembly memory and assume no system capabilities. If you want system capabilities, bring your own that actually reflect the system your web assembly runs in (such as [web-dom](https://github.com/web-dom/web-dom/) for DOM access)). The hope to create an ecosystem of `stdwasm` libraries that make highly optimzied web assembly that are easy to have work well together.
 
 # Testing
 ```C
