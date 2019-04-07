@@ -1,6 +1,6 @@
 # stdwasm
 
-A barebones common library for web assembly apps written in C
+A smaller standard library for web assembly apps written in C
 
 * [x] NULL, TRUE, FALSE, SUCCESS, FAILURE
 * [x] export attribute for easily exposing a function on web assembly
