@@ -21,7 +21,7 @@ To give specific examples of what `stdwasm` will not include:
 
 `stdwasm` will however include:
 * `malloc`, `memcpy` and other memory management functions
-* common globals like `NULL`
+* common defines like `NULL`
 
 # Testing
 ```C
