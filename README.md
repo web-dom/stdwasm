@@ -7,7 +7,7 @@ A barebones common library for web assembly apps written in C
 * [x] assert() with compatability for [west](https://github.com/web-dom/west) testing framework
 * [ ] malloc, free, realloc
 * [ ] json_parse, json_stringify
-* [ ] vector, string, hashmap
+* [ ] vector, hashmap, linked list
 * [x] immutable string helpers
 * [ ] webdom.h for accessing DOM,canvas,webgl via [web-dom](https://github.com/web-dom/web-dom/)
 
