@@ -33,7 +33,7 @@ export int test_addition(){
 }
 ```
 
-# Compiling examples in this project
+# Compiling this project
 
 You'll need several LLVM tools before you can compile:
 
@@ -55,7 +55,3 @@ sudo apt-get install clang-format
 Now you should be ready to build
 
 `make`
-
-Then you can serve the example with
-
-`make serve`
