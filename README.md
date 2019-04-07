@@ -11,6 +11,9 @@ A barebones common library for web assembly apps written in C
 * [x] immutable string helpers
 * [ ] webdom.h for accessing DOM,canvas,webgl via [web-dom](https://github.com/web-dom/web-dom/)
 
+# Why create a new standard library
+
+C is rife with historical code meant for a huge variety of system capabilities that make no sense for web assembly. `stdwasm` aims to create a standard library optimized for web assembly memory and no system capabilities. The hopes is to create an ecosystem of `stdwasm` libraries that make web assembly app easy to create. Dependencies should just work.
 
 # Testing
 ```C
