@@ -11,5 +11,8 @@ prebuild:
 	mkdir -p tmp/vendor/stdwasm
 lint:
 	clang-format -i src/main.c
-serve: build
-	python3 -m http.server
+watch:
+	while true; do \
+		make build; \
+		inotifywait -qre close_write .; \
+	done
