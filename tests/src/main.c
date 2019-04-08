@@ -15,8 +15,13 @@ export int test_memory(){
 }
 
 export int test_str(){
+  assert(TRUE==streq("a","a"),"a and a should be equal");
+  assert(FALSE==streq("a","b"),"a and b should not be equal");
+  assert(FALSE==streq("aa","b"),"aa and b should not be equal");
+  assert(TRUE==streq("",""),"empty strings should be equal");
   assert(0==strlen(""),"empty string should be length 0");
   assert(3==strlen("abc"),"abc should be length 3");
+  assert(TRUE==streq("ab",strconcat("a","b")),"concat a and b should be length 2");
   return SUCCESS;
 }
 

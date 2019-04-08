@@ -1,5 +1,6 @@
 #ifndef STDWASM_H
 #define STDWASM_H
+#define bool int
 #define size_t unsigned long
 #define export __attribute__((visibility("default")))
 #define NULL 0
@@ -11,17 +12,18 @@
   if (!(expr))                                                                 \
   return assert_failed(message, __FILE__, __LINE__)
 
-void *malloc(size_t size);
-size_t assert_failed(char *message, char *file, int line);
-
 struct LinkedList {
   void *data;
   struct LinkedList *next;
 };
 
+void *malloc(size_t size);
+size_t assert_failed(char *message, char *file, int line);
 struct LinkedList *cons(void *data, struct LinkedList *next);
 size_t cons_len(struct LinkedList *list);
 size_t strlen(const char *a);
-char *concat(char *strFirst, char *strSecond);
+char *strconcat(char *strFirst, char *strSecond);
+int streq(char *strFirst, char *strSecond);
 char *itoa(int num);
+void *memcpy(void *str1, const void *str2, size_t n);
 #endif

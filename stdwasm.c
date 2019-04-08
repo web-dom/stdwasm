@@ -5,7 +5,7 @@ extern size_t __heap_base;
 size_t current_heap = 0;
 
 void *malloc(size_t size) {
-  if(current_heap == 0){
+  if (current_heap == 0) {
     current_heap = __heap_base;
   }
   size_t target = current_heap;
@@ -62,13 +62,31 @@ size_t strlen(const char *a) {
   return len;
 }
 
+bool streq(char *strFirst, char *strSecond) {
+  size_t firstLen = strlen(strFirst);
+  size_t secondLen = strlen(strSecond);
+  int i;
+  if(firstLen == secondLen){
+    if(firstLen == 0){
+      return TRUE;
+    }
+    for(i=0;i<firstLen;i++){
+      if(strFirst[i]!=strSecond[i]){
+        return FALSE;
+      }
+    }
+    return TRUE;
+  }
+  return FALSE;
+}
+
 char *strconcat(char *strFirst, char *strSecond) {
   size_t firstLen = strlen(strFirst);
   size_t secondLen = strlen(strSecond);
   size_t len = firstLen + secondLen;
   char *newStr = malloc(len + 1);
   memcpy(newStr, strFirst, firstLen);
-  memcpy((char *)((size_t)newStr + strFirst), strSecond, secondLen);
-  newStr[len - 1] = '\0';
+  memcpy((char *)((size_t)newStr + firstLen), strSecond, secondLen);
+  newStr[len] = '\0';
   return newStr;
 }
