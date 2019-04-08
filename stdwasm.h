@@ -23,7 +23,7 @@ struct LinkedList *cons(void *data, struct LinkedList *next);
 size_t cons_len(struct LinkedList *list);
 size_t strlen(const char *a);
 char *strconcat(char *strFirst, char *strSecond);
-int streq(char *strFirst, char *strSecond);
+bool streq(char *strFirst, char *strSecond);
 char *itoa(int num);
 void *memcpy(void *str1, const void *str2, size_t n);
 #endif
