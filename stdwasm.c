@@ -9,8 +9,8 @@ void *malloc(size_t size) {
     current_heap = __heap_base;
   }
   size_t target = current_heap;
-  current_heap += size;
-  return (void *)target;
+  current_heap += 5 + size;
+  return (void *)target + 5;
 }
 
 size_t assert_failed(char *message, char *file, int line) {
@@ -66,12 +66,12 @@ bool streq(char *strFirst, char *strSecond) {
   size_t firstLen = strlen(strFirst);
   size_t secondLen = strlen(strSecond);
   int i;
-  if(firstLen == secondLen){
-    if(firstLen == 0){
+  if (firstLen == secondLen) {
+    if (firstLen == 0) {
       return TRUE;
     }
-    for(i=0;i<firstLen;i++){
-      if(strFirst[i]!=strSecond[i]){
+    for (i = 0; i < firstLen; i++) {
+      if (strFirst[i] != strSecond[i]) {
         return FALSE;
       }
     }

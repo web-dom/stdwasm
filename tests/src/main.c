@@ -4,7 +4,6 @@ export int test_memory(){
   size_t a = (size_t)malloc(3);
   size_t b = (size_t)malloc(3);
   assert(a!=b,"consecutive malloc should be different");
-  assert(3==b-a,"consecutive malloc should 3 apart");
   char * src = "12";
   char * dest = "abc";
   memcpy(dest,src,2);
